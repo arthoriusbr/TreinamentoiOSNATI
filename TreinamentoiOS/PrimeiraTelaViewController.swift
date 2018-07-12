@@ -10,11 +10,11 @@ import UIKit
 
 class PrimeiraTelaViewController: UIViewController {
 
-    @IBOutlet weak var BotaoProximaTela: UIButton!
+    @IBOutlet weak var botaoProximaTela: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.BotaoProximaTela.setTitle("Avançar para a próxima tela", for: .normal)
+        self.botaoProximaTela.setTitle("Avançar para a próxima tela", for: .normal)
 
         // Do any additional setup after loading the view.
     }

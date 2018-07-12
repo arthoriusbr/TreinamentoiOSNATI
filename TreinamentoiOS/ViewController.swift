@@ -10,29 +10,46 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var LabelSenha: UILabel!
-    @IBOutlet weak var LabelMatricula: UILabel!
+//    @IBOutlet weak var LabelSenha: UILabel!
+//    @IBOutlet weak var LabelMatricula: UILabel!
     
-    @IBOutlet weak var BotaoEntrar: UIButton!
+    @IBOutlet weak var botaoEntrarSenha: UIButton!
+    @IBOutlet weak var botaoEntrarMatricula: UIButton!
     
-    @IBOutlet weak var TextoMatricula: UITextField!
-    
-    @IBOutlet weak var TextoSenha: UITextField!
+    @IBOutlet weak var textoMatricula: UITextField!
+    @IBOutlet weak var textoSenha: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.BotaoEntrar.setTitle("Entrar", for: .normal)
-        //código que gera curvatura. Dividindo ao meio deixa o botão, originalmente quadrado, curvado
-        self.BotaoEntrar.layer.cornerRadius = self.BotaoEntrar.frame.height / 2
+        self.botaoEntrarSenha.setTitle("Entrar na tela de senha", for: .normal)
+        self.botaoEntrarMatricula.setTitle("Entrar na tela de matrícula", for: .normal)
         
-        self.LabelMatricula.text = "Minha matrícula aparecerá aqui"
-        self.LabelSenha.text = "Minha senha aparecerá aqui"
+        //código que gera curvatura. Dividindo ao meio deixa o botão, originalmente quadrado, curvado
+        self.botaoEntrarSenha.layer.cornerRadius = self.botaoEntrarSenha.frame.height / 2
+        self.botaoEntrarMatricula.layer.cornerRadius = self.botaoEntrarMatricula.frame.height / 2
+        
+//        self.LabelMatricula.text = "Minha matrícula aparecerá aqui"
+//        self.LabelSenha.text = "Minha senha aparecerá aqui"
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueMatricula" {
+            if let controller = segue.destination as? DetalheMatriculaViewController {
+                controller.matricula = self.textoMatricula.text
+            }
+        }
+        
+        if segue.identifier == "segueSenha" {
+            if let controller = segue.destination as? DetalheSenhaViewController {
+                controller.senha = self.textoSenha.text
+            }
+        }
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("Oi estou no willAppear")
-        //self.BotaoEntrar
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,10 +68,11 @@ class ViewController: UIViewController {
         print("Oi estou no DidDisappear")
     }
     
-    @IBAction func cliqueBotao(_ sender: Any) {
-        LabelMatricula?.text = TextoMatricula.text
-        LabelSenha?.text = TextoSenha.text
-    }
+//    @IBAction func cliqueBotao(_ sender: Any) {
+//
+//        LabelMatricula?.text = TextoMatricula.text
+//        LabelSenha?.text = TextoSenha.text
+//    }
     
 }
 

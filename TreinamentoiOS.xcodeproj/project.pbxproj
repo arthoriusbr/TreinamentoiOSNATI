@@ -13,6 +13,8 @@
 		83EDB85620F623A60006A842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EDB85520F623A60006A842 /* Assets.xcassets */; };
 		83EDB85920F623A60006A842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EDB85720F623A60006A842 /* LaunchScreen.storyboard */; };
 		83EDB86320F63F920006A842 /* PrimeiraTelaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDB86220F63F920006A842 /* PrimeiraTelaViewController.swift */; };
+		83EDB86620F7781A0006A842 /* DetalheSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDB86520F7781A0006A842 /* DetalheSenhaViewController.swift */; };
+		83EDB86820F786FC0006A842 /* DetalheMatriculaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDB86720F786FC0006A842 /* DetalheMatriculaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		83EDB85820F623A60006A842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83EDB85A20F623A60006A842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EDB86220F63F920006A842 /* PrimeiraTelaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeiraTelaViewController.swift; sourceTree = "<group>"; };
+		83EDB86520F7781A0006A842 /* DetalheSenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheSenhaViewController.swift; sourceTree = "<group>"; };
+		83EDB86720F786FC0006A842 /* DetalheMatriculaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheMatriculaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +63,22 @@
 				83EDB84E20F623A50006A842 /* AppDelegate.swift */,
 				83EDB85020F623A50006A842 /* ViewController.swift */,
 				83EDB85220F623A50006A842 /* Main.storyboard */,
+				83EDB86420F776480006A842 /* Supporting Files */,
+				83EDB86220F63F920006A842 /* PrimeiraTelaViewController.swift */,
+				83EDB86520F7781A0006A842 /* DetalheSenhaViewController.swift */,
+				83EDB86720F786FC0006A842 /* DetalheMatriculaViewController.swift */,
+			);
+			path = TreinamentoiOS;
+			sourceTree = "<group>";
+		};
+		83EDB86420F776480006A842 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				83EDB85520F623A60006A842 /* Assets.xcassets */,
 				83EDB85720F623A60006A842 /* LaunchScreen.storyboard */,
 				83EDB85A20F623A60006A842 /* Info.plist */,
-				83EDB86220F63F920006A842 /* PrimeiraTelaViewController.swift */,
 			);
-			path = TreinamentoiOS;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EDB86820F786FC0006A842 /* DetalheMatriculaViewController.swift in Sources */,
+				83EDB86620F7781A0006A842 /* DetalheSenhaViewController.swift in Sources */,
 				83EDB86320F63F920006A842 /* PrimeiraTelaViewController.swift in Sources */,
 				83EDB85120F623A50006A842 /* ViewController.swift in Sources */,
 				83EDB84F20F623A50006A842 /* AppDelegate.swift in Sources */,
@@ -286,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2P8264N2HQ;
-				INFOPLIST_FILE = TreinamentoiOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TreinamentoiOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2P8264N2HQ;
-				INFOPLIST_FILE = TreinamentoiOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TreinamentoiOS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
